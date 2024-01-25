@@ -9,6 +9,7 @@ resource "aws_route53_zone" "hosted_zone" {
 
 resource "aws_route53_record" "teleport_entry" {
   zone_id = aws_route53_zone.hosted_zone.id
+#  zone_id = "YourAWSHostedZoneID"
   name    = "teleport"
   type    = "A"
   ttl     = 60
