@@ -25,7 +25,7 @@ resource "aws_instance" "teleport_instance" {
               sleep 10
 
 
-              sudo tctl users add teleport-admin --roles=editor,access --logins=root,ubuntu,ec2-user | sudo tee -a teleport_invite_url
+              sudo tctl users add teleport-admin --roles=editor,access --logins=root,ubuntu,ec2-user | sudo tee -a /root/teleport_invite_url
 
               EOF
 }
